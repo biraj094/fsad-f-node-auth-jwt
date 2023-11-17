@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb+srv://bond007:qwerty12345@nodecluster.gmpfhu2.mongodb.net/NodeAuth1';
+const dbURI = 'mongodb+srv://st124371:<password>@cluster0.ezexw8k.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
@@ -18,3 +18,4 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 // routes
 app.get('/', (req, res) => res.render('home'));
 app.get('/smoothies', (req, res) => res.render('smoothies'));
+
